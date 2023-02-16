@@ -8,9 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - run: npm ci
-      shell: bash
-    - run: npm run deploy -- -u "github-actions-bot <support+actions@github.com>"
-      shell: bash
+    - name: Deploy react app to github pages
+      uses: tanwanimohit/deploy-react-to-ghpages@v1.0.1
       env: 
         REACT_APP_OPENAI_KEY: ${{ secrets.REACT_APP_OPENAI_KEY }}
