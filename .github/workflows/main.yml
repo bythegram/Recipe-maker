@@ -8,8 +8,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Deploy with gh-pages
-        run: |
-          git remote set-url origin https://github.com/bythegram/Recipe-maker.git
-          npm run deploy -- -u "github-actions-bot <support+actions@github.com>"
+        run: npm run deploy -- -u "github-actions-bot <support+actions@github.com>"
         env:
           REACT_APP_OPENAI_KEY: ${{ secrets.REACT_APP_OPENAI_KEY }}
