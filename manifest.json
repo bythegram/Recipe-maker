@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "React AI Cocktail Maker",
+  "name": "Use AI to create cocktail recipes",
   "icons": [
     {
       "src": "favicon.ico",
