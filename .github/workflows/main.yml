@@ -11,17 +11,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Build
-      uses: actions/checkout@v2
-    - run: |
-        npm ci
-        npm run build
-      env:
-        REACT_APP_OPENAI_KEY: ${{ secrets.REACT_APP_APIKey }}
+      - name: Checkout 🛎️
+        uses: actions/checkout@v3
 
-    - name: Deploy
-      uses: JamesIves/github-pages-deploy-action@releases/v3
-      with:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        BRANCH: gh-pages
-        FOLDER: build
+      - name: Install and Build 🔧 # This example project is built using npm and outputs the result to the 'build' folder. Replace with the commands required to build your project, or remove this step entirely if your site is pre-built.
+        run: |
+          npm ci
+          npm run build
+        env:
+          REACT_APP_OPENAI_KEY: ${{ secrets.REACT_APP_APIKey }}
+
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: build # The folder the action should deploy.
