@@ -20,7 +20,7 @@ const generateRecipe = async (spirits, novel) => {
 		} });
 
 		const recipe = response.data.choices[0].text;
-		console.log(recipe);
+		console.log('recipe:', recipe);
 		return recipe;
 	} catch (error) {
 		console.error(error);
