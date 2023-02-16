@@ -4,6 +4,7 @@ const API_KEY = process.env.REACT_APP_OPENAI_KEY;
 const API_ENDPOINT = 'https://api.openai.com/v1/completions';
 
 const generateRecipe = async (spirits, novel) => {
+	console.log('key:', API_KEY)
 	try {
 		let prompt = `Invent a new custom cocktail recipe using ${spirits}`;
 		prompt = novel ? prompt + `, inspired by ${novel}` : prompt;
