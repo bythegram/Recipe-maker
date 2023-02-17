@@ -1,6 +1,7 @@
 import axios from 'axios';
 
-const API_KEY = process.env.REACT_APP_OPENAI_KEY;
+const queryParams = new URLSearchParams(window.location.search)
+const API_KEY = queryParams.get("key")
 const API_ENDPOINT = 'https://api.openai.com/v1/completions';
 
 const generateRecipe = async (spirits, novel) => {

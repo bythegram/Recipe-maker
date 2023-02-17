@@ -6,8 +6,6 @@ import RecipeContainer from './components/RecipeContainer';
 import FooterContainer from './components/FooterContainer';
 import './App.scss';
 
-const API_KEY = process.env.REACT_APP_OPENAI_KEY;
-
 const CocktailForm = () => {
   const [spirits, setSpirits] = useState('');
   const [novel, setNovel] = useState('');
@@ -25,7 +23,6 @@ const CocktailForm = () => {
 
   return (
     <ParentContainer>
-      <p>key: {API_KEY}</p>
       <HeaderContainer spirits={spirits} setSpirits={setSpirits} novel={novel} setNovel={setNovel} handleSubmit={handleSubmit}></HeaderContainer>
       <RecipeContainer loading={loading} recipe={recipe}></RecipeContainer>
       <FooterContainer></FooterContainer>
