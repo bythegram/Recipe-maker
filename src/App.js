@@ -25,7 +25,7 @@ const CocktailForm = () => {
 
   return (
     <ParentContainer>
-      <p>{API_KEY}</p>
+      <p>key: {API_KEY}</p>
       <HeaderContainer spirits={spirits} setSpirits={setSpirits} novel={novel} setNovel={setNovel} handleSubmit={handleSubmit}></HeaderContainer>
       <RecipeContainer loading={loading} recipe={recipe}></RecipeContainer>
       <FooterContainer></FooterContainer>
