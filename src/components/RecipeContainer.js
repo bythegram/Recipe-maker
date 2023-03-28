@@ -14,6 +14,17 @@ const RecipeContainer = ({ loading, recipe }) => {
 							dangerouslySetInnerHTML={{ __html: recipe.trim() }}></p>
 					</Col>
 				)}
+				{(!recipe && !loading) && (
+					<Col md={6}>
+						<p className="recipe">
+							Hello! Welcome to a fun little project that will let you create endless cocktail recipes inspired by your favourite novels, movies, locations or really whatever you can imagine.
+							<br />
+							Just click "Launch" and enter some spirits, an inspiration and let AI do the rest.
+							<br />
+							Cheers!
+						</p>
+					</Col>
+				)}
 			</Row>
 		</Container>
 	);
