@@ -15,10 +15,10 @@ const HeaderContainer = ({ spirits, setSpirits, novel, setNovel, handleSubmit })
 	return (
 		<Container fluid className='bg-dark text-white py-4'>
 			<Row className="justify-content-between align-items-center">
-				<Col md="auto">
+				<Col md="auto" xs="auto" sm="auto">
 					<CoconutCocktail size={65} />
 				</Col>
-				<Col md="auto">
+				<Col xs="auto" sm="auto" md="auto">
 					<Button variant="primary" onClick={handleShow}>
 						Launch
 					</Button>
@@ -27,7 +27,7 @@ const HeaderContainer = ({ spirits, setSpirits, novel, setNovel, handleSubmit })
 						<Offcanvas.Body>
 							<Form onSubmit={handleSubmit} className="h-100">
 								<Row className="justify-content-center align-items-center h-100">
-									<Col md="5" className='mb-3'>
+									<Col md="5">
 										<Form.Group controlId="formSpirits">
 											<Form.Control
 												type="text"
@@ -37,7 +37,7 @@ const HeaderContainer = ({ spirits, setSpirits, novel, setNovel, handleSubmit })
 											/>
 										</Form.Group>
 									</Col>
-									<Col md="5" className='mb-3'>
+									<Col md="5">
 										<Form.Group controlId="formNovel">
 											<Form.Control
 												type="text"
@@ -47,8 +47,8 @@ const HeaderContainer = ({ spirits, setSpirits, novel, setNovel, handleSubmit })
 											/>
 										</Form.Group>
 									</Col>
-									<Col md="auto" className='mb-3'>
-										<Button variant="primary" type="submit">
+									<Col md="auto">
+										<Button variant="primary" type="submit" onClick={handleClose}>
 											Generate Recipe
 										</Button>
 									</Col>
