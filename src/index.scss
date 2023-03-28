@@ -2,6 +2,12 @@ $input-bg: transparent;
 $input-color: white;
 $input-border-radius: 0;
 $btn-border-radius: 0;
+$gray-900: #03001C;
+$purple: #301E67;
+$green: #B6EADA;
+$blue: #5B8FB9;
+$primary: $blue;
+$secondary: $purple;
 @import "~bootstrap/scss/bootstrap";
 
 body {

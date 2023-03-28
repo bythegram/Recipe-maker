@@ -6,7 +6,7 @@ const RecipeContainer = ({ loading, recipe }) => {
 		<Container className='py-4'>
 			<Row className="justify-content-center">
 				{loading && (
-					<Col md={6}>loading...</Col>
+					<Col md={6}>mixing your cocktail...</Col>
 				)}
 				{recipe && (
 					<Col md={6}>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { Container, Row, Col, Form, Button, Offcanvas } from 'react-bootstrap';
+import { Container, Row, Col, Form, Button, Offcanvas, FloatingLabel } from 'react-bootstrap';
 import { CoconutCocktail } from "@vectopus/atlas-icons-react";
 
 /**
@@ -16,39 +16,47 @@ const HeaderContainer = ({ spirits, setSpirits, novel, setNovel, handleSubmit })
 		<Container fluid className='bg-dark text-white py-4'>
 			<Row className="justify-content-between align-items-center">
 				<Col md="auto" xs="auto" sm="auto">
-					<CoconutCocktail size={65} />
+					<CoconutCocktail size={45} />
 				</Col>
 				<Col xs="auto" sm="auto" md="auto">
-					<Button variant="primary" onClick={handleShow}>
+					<Button variant="primary" onClick={handleShow} className="text-light">
 						Launch
 					</Button>
 
-					<Offcanvas show={show} onHide={handleClose} placement="bottom" className='bg-dark text-white'>
+					<Offcanvas show={show} onHide={handleClose} placement="end" className='bg-dark text-white'>
 						<Offcanvas.Body>
 							<Form onSubmit={handleSubmit} className="h-100">
-								<Row className="justify-content-center align-items-center h-100">
-									<Col md="5">
-										<Form.Group controlId="formSpirits">
+								<Row className="">
+									<Col md="12" className='mb-3'>
+										<FloatingLabel
+											controlId="formSpirits"
+											label="Spirit(s)"
+											className="mb-3"
+										>
 											<Form.Control
 												type="text"
 												value={spirits}
 												onChange={(e) => setSpirits(e.target.value)}
 												placeholder="Enter spirit(s)"
 											/>
-										</Form.Group>
+										</FloatingLabel>
 									</Col>
-									<Col md="5">
-										<Form.Group controlId="formNovel">
+									<Col md="12" className='mb-3'>
+										<FloatingLabel
+											controlId="formNovel"
+											label="Inspiriation"
+											className="mb-3"
+										>
 											<Form.Control
 												type="text"
 												value={novel}
 												onChange={(e) => setNovel(e.target.value)}
 												placeholder="Inspiration (movie, novel, location etc)"
 											/>
-										</Form.Group>
+										</FloatingLabel>
 									</Col>
-									<Col md="auto">
-										<Button variant="primary" type="submit" onClick={handleClose}>
+									<Col md="12">
+										<Button variant="primary" type="submit" onClick={handleClose} className="text-light">
 											Generate Recipe
 										</Button>
 									</Col>
