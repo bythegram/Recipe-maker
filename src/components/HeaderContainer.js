@@ -25,9 +25,9 @@ const HeaderContainer = ({ spirits, setSpirits, novel, setNovel, handleSubmit })
 
 					<Offcanvas show={show} onHide={handleClose} placement="bottom" className='bg-dark text-white'>
 						<Offcanvas.Body>
-							<Form onSubmit={handleSubmit}>
-								<Row className="justify-content-center align-items-center">
-									<Col md="5">
+							<Form onSubmit={handleSubmit} className="h-100">
+								<Row className="justify-content-center align-items-center h-100">
+									<Col md="5" className='mb-3'>
 										<Form.Group controlId="formSpirits">
 											<Form.Control
 												type="text"
@@ -37,7 +37,7 @@ const HeaderContainer = ({ spirits, setSpirits, novel, setNovel, handleSubmit })
 											/>
 										</Form.Group>
 									</Col>
-									<Col md="5">
+									<Col md="5" className='mb-3'>
 										<Form.Group controlId="formNovel">
 											<Form.Control
 												type="text"
@@ -47,7 +47,7 @@ const HeaderContainer = ({ spirits, setSpirits, novel, setNovel, handleSubmit })
 											/>
 										</Form.Group>
 									</Col>
-									<Col md="auto">
+									<Col md="auto" className='mb-3'>
 										<Button variant="primary" type="submit">
 											Generate Recipe
 										</Button>
