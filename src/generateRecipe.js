@@ -1,11 +1,8 @@
 import axios from 'axios';
 
-const queryParams = new URLSearchParams(window.location.search)
-const API_KEY = queryParams.get("key")
-const API_ENDPOINT = 'https://api.openai.com/v1/completions';
+const API_ENDPOINT = 'https://bythegram.ca/wp-json/atom-api/v1/atom-endpoint';
 
 const generateRecipe = async (spirits, novel) => {
-	console.log('key?:', API_KEY)
 	try {
 		let prompt = `Invent a new custom cocktail recipe using ${spirits}`;
 		prompt = novel ? prompt + `, inspired by ${novel}` : prompt;
@@ -17,12 +14,9 @@ const generateRecipe = async (spirits, novel) => {
 			model: "text-davinci-003",
 		}, { headers: {
 			"Content-Type": "application/json",
-			Authorization:
-				`Bearer ${API_KEY}`
 		} });
 
 		const recipe = response.data.choices[0].text;
-		console.log('recipe:', recipe);
 		return recipe;
 	} catch (error) {
 		console.error(error);
