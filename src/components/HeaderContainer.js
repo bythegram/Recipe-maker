@@ -44,7 +44,7 @@ const HeaderContainer = ({ spirits, setSpirits, novel, setNovel, handleSubmit })
 									<Col md="12" className='mb-3'>
 										<FloatingLabel
 											controlId="formNovel"
-											label="Inspiriation"
+											label="Inspiration (movie, novel, location etc)"
 											className="mb-3"
 										>
 											<Form.Control
