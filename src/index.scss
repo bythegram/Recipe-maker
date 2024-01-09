@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&family=League+Spartan:wght@300&display=swap');
 $input-bg: transparent;
 $input-color: white;
 $input-border-radius: 0;
@@ -6,15 +7,16 @@ $gray-900: #03001C;
 $purple: #301E67;
 $green: #B6EADA;
 $blue: #5B8FB9;
+$dark-blue: #0a1d3b;
 $primary: $blue;
 $secondary: $purple;
+$font-family-sans-serif: 'League Spartan', sans-serif;
+$headings-font-family: 'Josefin Sans', sans-serif;
 @import "~bootstrap/scss/bootstrap";
 
 body {
+  background-color: $gray-300;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
